@@ -43,11 +43,9 @@ opcion=input("Conoce el valor de la generatriz? (s/n): ")
 if opcion=="s" or opcion=="S":
     generatriz=float(input("Ingrese el valor de la generatriz: "))
 else:
-    generatriz=(radioMayor-radioMenor)/altura
-    generatriz=generatriz**2+altura**2
-    generatriz=generatriz**(1/2)
+    generatriz = ((radioMayor - radioMenor) ** 2 + altura ** 2) ** 0.5
     print("El valor de la generatriz es:",round(generatriz,2))
-area=PI*(radioMayor+radioMenor+generatriz*(radioMenor-radioMayor))
+area = PI * (radioMayor + radioMenor) * generatriz + PI * (radioMayor**2 + radioMenor**2)
 print("El area del cono truncado es:",round(area,2))
 print("<------------------------------------------->")
 print("FIN DEL PROGRAMA")
@@ -59,12 +57,12 @@ print("\nPROGRAMA QUE CALCULA EL VOLUMEN DE UN CONO TRUNCADO")
 print("<------------------------------------------->")
 opcion=input("Es la misma figura que el ejercicio anterior? (s/n): ")
 if opcion=="s" or opcion=="S":
-    volumen=(altura*PI)/3*(radioMayor**2+radioMenor**2+radioMayor*radioMenor)
+    volumen = (PI * altura / 3) * (radioMayor**2 + radioMenor**2 + radioMayor * radioMenor)
 else:
     altura=float(input("Ingrese la altura del cono truncado: "))
     radioMayor=float(input("Ingrese el radio mayor del cono truncado: "))
     radioMenor=float(input("Ingrese el radio menor del cono truncado: "))
-    volumen=(altura*PI)/3*(radioMayor**2+radioMenor**2+radioMayor*radioMenor)
+    volumen = (PI * altura / 3) * (radioMayor**2 + radioMenor**2 + radioMayor * radioMenor)
 print("El volumen del cono truncado es:",round(volumen,2))
 print("<------------------------------------------->")
 print("FIN DEL PROGRAMA")
